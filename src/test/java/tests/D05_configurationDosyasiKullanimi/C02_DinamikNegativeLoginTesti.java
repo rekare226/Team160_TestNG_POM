@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.TestOtomasyonuPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C02_DinamikNegativeLoginTesti {
 
@@ -29,6 +30,7 @@ public void gecersizSifreTesti(){
     testOtomasyonuPage=new TestOtomasyonuPage();
 
     //2-account linkine basin
+    ReusableMethods.bekle(1);
     testOtomasyonuPage.accountButonu.click();
 
 //3- 3 farkli test method'u olusturun
@@ -41,6 +43,7 @@ testOtomasyonuPage.testotomasyonuPassWord
                 .sendKeys(ConfigReader.getProperty("toGecersizSifre"));
 
 //4-login butonu
+    ReusableMethods.bekle(2);
   testOtomasyonuPage.testotomasyonuSignButonu.click();
 
 //5-Basarili olarak Girlmediğini test edin
@@ -59,6 +62,7 @@ public void gecersizEmailTesti(){
     Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
     testOtomasyonuPage=new TestOtomasyonuPage();
     //2-account linkine basin
+    ReusableMethods.bekle(2);
     testOtomasyonuPage.accountButonu.click();
    //3- 3 farkli test method'u olusturun
   //-gecersiz email,gecerli password
@@ -67,6 +71,7 @@ public void gecersizEmailTesti(){
     testOtomasyonuPage.testotomasyonuPassWord.sendKeys(ConfigReader.getProperty("toGecerliSifre"));
 
     //4-login butonu
+    ReusableMethods.bekle(2);
     testOtomasyonuPage.testotomasyonuSignButonu.click();
 
     //basarili olarak giriş yapılamdıgını test edin
@@ -82,6 +87,7 @@ public void gecersizEmailGecersizPassWordTesti(){
     Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
     testOtomasyonuPage=new TestOtomasyonuPage();
     //2-account linkine basin
+    ReusableMethods.bekle(2);
     testOtomasyonuPage.accountButonu.click();
 
     //3- 3 farkli test method'u olusturun
@@ -89,6 +95,7 @@ public void gecersizEmailGecersizPassWordTesti(){
     testOtomasyonuPage.testotomasyonuEmail.sendKeys(ConfigReader.getProperty("toGecersizMail"));
     testOtomasyonuPage.testotomasyonuPassWord.sendKeys(ConfigReader.getProperty("toGecersizSifre"));
     //4-login butonu
+    ReusableMethods.bekle(2);
     testOtomasyonuPage.testotomasyonuSignButonu.click();
     //basarili olarak girlmediğini test edin
 

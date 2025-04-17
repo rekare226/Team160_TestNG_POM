@@ -38,8 +38,16 @@ public class TestOtomasyonuPage {
     @FindBy(xpath = "//span[.='Logout']")
     public WebElement tesotomasyouLogoutYazisi;
 
+    @FindBy(xpath = "//button[@class='add-to-cart']")
+    public WebElement addtoCardButonu;
 
+    @FindBy(xpath = "(//span[.='Your Cart'])[1]")
+    public WebElement yourCardButonu;
 
+    @FindBy(xpath = "//*[@class='product-title text-center']")
+    public WebElement sepettekiUrunElementi;
 
+    @FindBy(xpath = "//*[@class='product-count-text']")
+    public WebElement aramaSonucuUrunSayisiElementi;
 
 }
