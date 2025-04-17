@@ -56,7 +56,7 @@ public class C02_SoftAssertion {
 
 //urun isminde case sensetive olmadan aranacak kelime bulundugunu test edin
         String expectedIsimIcerik=ConfigReader.getProperty("toAranacakKelime");
-        String actualUrunIsmi=testOtomasyonuPage.urunIcindekiYazi.getText().toLowerCase();
+        String actualUrunIsmi=testOtomasyonuPage.ilkUrunSayfasindakiIsimElementi.getText().toLowerCase();
         softAssert.assertTrue(actualUrunIsmi.contains(expectedIsimIcerik),"Urun ismi aranacak kelimeyi içermiyor");
 
         softAssert.assertAll();

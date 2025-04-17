@@ -50,7 +50,7 @@ public class C01_PageClassKullanimi {
     //cıkan urun isminde case sensetive olmadan phone oldugunu test edin
         String expecdekIcerik="phone";
         String actualUrunIsmi=testOtomasyonuPage
-                                      .urunIcindekiYazi
+                                      .ilkUrunSayfasindakiIsimElementi
                                         .getText()
                                          .toLowerCase();
         Assert.assertTrue(actualUrunIsmi.contains(expecdekIcerik));

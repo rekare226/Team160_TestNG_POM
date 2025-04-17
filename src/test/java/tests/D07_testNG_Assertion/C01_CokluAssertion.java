@@ -12,7 +12,7 @@ import utilities.ReusableMethods;
 
 public class C01_CokluAssertion {
 
-    @Test
+    @Test(groups ="E2E")
     public void ilkUrunIsimtesti(){
         //1-testotomasyonu anasayfaya gidip
 
@@ -55,7 +55,7 @@ testOtomasyonuPage.aramaKutusu.sendKeys(ConfigReader.getProperty("toAranacakKeli
 
 //urun isminde case sensetive olmadan aranacak kelime bulundugunu test edin
     String expectedIsimIcerik=ConfigReader.getProperty("toAranacakKelime");
-    String actualUrunIsmi=testOtomasyonuPage.urunIcindekiYazi.getText().toLowerCase();
+    String actualUrunIsmi=testOtomasyonuPage.ilkUrunSayfasindakiIsimElementi.getText().toLowerCase();
     Assert.assertTrue(actualUrunIsmi.contains(expectedIsimIcerik));
 
 //5- sayfayi kapatin

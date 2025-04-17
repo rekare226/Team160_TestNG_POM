@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+2- Asagidaki methodlarini calisitirin
+    //D02 den C01 daki testotomasyonuTest
+    //D05  den C02 deki gecersizEmailTesti DISINDAKI methodlar
+   Bir classdaki tum methodları çalıştırmak için method secmeye gerek yok class olarak çalıştırız
+   ancak bir classdaki tüm methodlar calismayacaksa spesfifk olarak
+    calişacakları include yapar diğerleri exclude yapariz
+
+-->
+
+<suite name="Istenen Methodlar Suite">
+    <test name="istenen methodlari calistirma">
+
+        <classes>
+            <class name="tests.D02_priority_dependsOnMethods.C01_Priority">
+             <methods>
+                 <include name="testotomasyonuTest"></include>
+             </methods>
+            </class>
+            <class name="tests.D05_configurationDosyasiKullanimi.C02_DinamikNegativeLoginTesti">
+                <methods>
+                    <exclude name="gecersizEmailTesti"></exclude>
+                </methods>
+
+
+            </class>
+
+
+
+        </classes>
+
+    </test>
+
+
+
+</suite>

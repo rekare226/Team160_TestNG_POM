@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+2-D06 packagenin altindaaki tüm classlari çalistrin
+-->
+<suite name="package suite">
+    <test name="istenen packageleri çalıştırma">
+        
+     <packages>
+         <package name="tests.D06_driveClassDinamikYapma"></package>
+         
+         
+         
+     </packages>   
+        
+        
+        
+        
+    </test>
+    
+    
+    
+    
+    
+    
+</suite>

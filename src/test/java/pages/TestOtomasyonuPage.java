@@ -21,7 +21,7 @@ public class TestOtomasyonuPage {
     public List<WebElement> bulunanUrunElementleriList;
 
     @FindBy(xpath = "(//*[@class=' heading-sm mb-4'])")
-    public WebElement urunIcindekiYazi;
+    public WebElement ilkUrunSayfasindakiIsimElementi;
 
     @FindBy(xpath = "(//span[@class='menu-icon-text'])[1]")
     public WebElement accountButonu;
@@ -40,6 +40,7 @@ public class TestOtomasyonuPage {
 
     @FindBy(xpath = "//button[@class='add-to-cart']")
     public WebElement addtoCardButonu;
+
 
     @FindBy(xpath = "(//span[.='Your Cart'])[1]")
     public WebElement yourCardButonu;

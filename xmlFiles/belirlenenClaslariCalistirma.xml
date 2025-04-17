@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+1-Smoke test icin asagidaki belirlenen class'lari calisitirin
+//D03 den C01
+    //D04  den C02
+    //D05 den C02
+
+-->
+<suite name="smoke Test Suite">
+
+    <test name="Smoke Test">
+
+        <classes>
+
+            <class name="tests.D03_pageObjectModel_POM.C01_BasicDriverClassKullanma"></class>
+            <class name="tests.D04_pageClassKullanimi.C02_FacebookTesti"></class>
+            <class name="tests.D05_configurationDosyasiKullanimi.C02_DinamikNegativeLoginTesti"></class>
+
+
+        </classes>
+
+
+    </test>
+
+
+</suite>

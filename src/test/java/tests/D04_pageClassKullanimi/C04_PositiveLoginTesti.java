@@ -11,7 +11,7 @@ import utilities.ReusableMethods;
 
 public class C04_PositiveLoginTesti {
 
-    @Test
+    @Test(groups = "E2E")
     public void positiveLoginTesti(){
     /*
      testlerimizi DINAMIK yapmak ve test datalarina KOLAY ERISMEK icin

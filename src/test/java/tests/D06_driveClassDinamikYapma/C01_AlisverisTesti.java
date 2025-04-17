@@ -1,5 +1,6 @@
 package tests.D06_driveClassDinamikYapma;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -13,7 +14,7 @@ public class C01_AlisverisTesti {
 
     TestOtomasyonuPage testOtomasyonuPage;
 
-    @Test
+    @Test(groups ="E2E")
     public void alisverisTesti(){
    //1- https://www.testotomasyonu.com/ anasayfasina gidin
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
@@ -27,23 +28,25 @@ public class C01_AlisverisTesti {
             .click();
 
     //4- urun ismini kaydedin ve urunu sepete ekleyin
-    String ilkUrunIsmi=testOtomasyonuPage.urunIcindekiYazi.getText();
+    String ilkUrunIsmi=testOtomasyonuPage.ilkUrunSayfasindakiIsimElementi.getText();
 
     //5-your card linkine tıklayın
         ReusableMethods.bekle(2);
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN);
-        ReusableMethods.bekle(2);
-       testOtomasyonuPage.addtoCardButonu.click();
+        ReusableMethods.bekle(1);
+        JavascriptExecutor jse=(JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("arguments[0].click();",testOtomasyonuPage.addtoCardButonu);
+
 
 
     //your card linkine tiklayın
         ReusableMethods.bekle(1);
-    testOtomasyonuPage.yourCardButonu.click();
+        jse.executeScript("arguments[0].click();",testOtomasyonuPage.yourCardButonu);
 
  //6- kaydettiğimiz urun ismi ile sepetteki urun isminin ayni oldugunu test edin
  String sepettekiUrunIsmi=testOtomasyonuPage.sepettekiUrunElementi.getText();
-        Assert.assertEquals(testOtomasyonuPage.sepettekiUrunElementi,testOtomasyonuPage.urunIcindekiYazi);
+        Assert.assertEquals(sepettekiUrunIsmi, ilkUrunIsmi);
 
         //7 sayfayi kapatin
         Driver.quitDriver();

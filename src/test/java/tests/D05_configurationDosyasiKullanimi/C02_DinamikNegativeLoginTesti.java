@@ -80,7 +80,7 @@ public void gecersizEmailTesti(){
 
 }
 
-@Test
+@Test(groups = {"E2E","smoke","regresion"})
 public void gecersizEmailGecersizPassWordTesti(){
 
     //1-https://www.testotomasyonu.com/ anasayfasina gidin
